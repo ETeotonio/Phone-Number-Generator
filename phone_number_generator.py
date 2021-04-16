@@ -11,14 +11,14 @@ class phone_number_generator:
             phone_number = ''
             for row in csv_reader:
                 if(row['Country'] == country and row['type']==phone_type):
-                    phone_number = 'random_phone_number:'
+                    phone_number = 'random_phone_number: \"'
                     for character in row['format']:
                         if(character != 'x'):
                             phone_number+=character
                         else:
                             phone_number+=str(randint(1,9))
             if(phone_number == ''):
-                phone_number='error: Country not found or incorrect'
+                phone_number='error: \"Country not found or incorrect'
             return phone_number
     
     
