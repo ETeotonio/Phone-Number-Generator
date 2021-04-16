@@ -11,7 +11,7 @@ def api_getphone():
     phone_type = str(parameters.get('type')).replace("\"","")
 
     generate_new_phone = phone_number_generator.phone_number_generator()
-    phone_number = '{'+generate_new_phone.generate_phone(country,phone_type)+'}'
+    phone_number = '{'+generate_new_phone.generate_phone(country,phone_type)+'\"}'
 
     return phone_number
 
